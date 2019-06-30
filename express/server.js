@@ -1,12 +1,11 @@
 'use strict';
 const express = require('express');
-const path = require('path');
 const serverless = require('serverless-http');
 const app = express();
 const bodyParser = require('body-parser');
 const router = express.Router();
 
-let views = path.join(__dirname, '../views');
+let views = 'https://github.com/king-melchizedek/netlify-mvc-app/tree/master/views';
 
 router.get('/', (req, res) => {
   res.sendFile('index.html', { root: views });
