@@ -6,13 +6,14 @@ const app = express();
 const bodyParser = require('body-parser');
 const router = express.Router();
 
-let root = path.join(__dirname, '../');
+let views = path.join(__dirname, '../views');
 
 router.get('/', (req, res) => {
-  res.sendFile('index.html', { root: root });
+  res.sendFile('index.html', { root: views });
 });
+
 app.get('/', (req, res) => {
-  res.sendFile('index.html', { root: root });
+  res.sendFile('index.html', { root: views });
 });
 
 app.use(bodyParser.json());
