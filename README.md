@@ -28,3 +28,7 @@ node node_modules/pug-cli/index.js pug/ --out ./views
 ```
 
 Use `npm pug` to accomplish the same conversion.
+
+### MVC on Netlify
+
+Netlify does [not support](https://github.com/neverendingqs/netlify-express/issues/3) redirects.
