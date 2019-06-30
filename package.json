@@ -21,9 +21,6 @@
     "url": "https://github.com/neverendingqs/netlify-express/issues"
   },
   "homepage": "https://github.com/neverendingqs/netlify-express#readme",
-  "dependencies": {
-    "pug": "^2.0.4",
-  },
   "devDependencies": {
     "body-parser": "^1.18.3",
     "express": "^4.16.3",
