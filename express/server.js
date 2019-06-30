@@ -1,15 +1,18 @@
 'use strict';
 const express = require('express');
+const path = require('path');
 const serverless = require('serverless-http');
 const app = express();
 const bodyParser = require('body-parser');
-
 const router = express.Router();
+
+let root = path.join(__dirname, '../');
+
 router.get('/', (req, res) => {
-  res.render('index')
+  res.sendFile('index.html', { root: root });
 });
 app.get('/', (req, res) => {
-  res.render('index')
+  res.sendFile('index.html', { root: root });
 });
 
 app.use(bodyParser.json());
