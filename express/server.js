@@ -11,9 +11,7 @@ router.get('/', (req, res) => {
   res.end();
 });
 app.get('/', (req, res) => {
-  res.writeHead(200, { 'Content-Type': 'text/html' });
-  res.write('<h1>Hello from Second Page!</h1>');
-  res.end();
+  res.render('index')
 });
 
 app.use(bodyParser.json());
