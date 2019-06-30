@@ -6,10 +6,14 @@ const bodyParser = require('body-parser');
 
 const router = express.Router();
 router.get('/', (req, res) => {
-  res.render('index');
+  res.writeHead(200, { 'Content-Type': 'text/html' });
+  res.write('<h1>Hello from Express.js!</h1>');
+  res.end();
 });
 app.get('/', (req, res) => {
-  res.render('index');
+  res.writeHead(200, { 'Content-Type': 'text/html' });
+  res.write('<h1>Hello from Second Page!</h1>');
+  res.end();
 });
 
 app.use(bodyParser.json());
